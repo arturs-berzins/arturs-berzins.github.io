@@ -1,0 +1,27 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+  }
+
+
+.social-links {
+    list-style: none;
+    padding: 0px;
+    margin: 20px auto;
+}
+
+.social-links li {
+    display: inline;
+    margin: 10px;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
