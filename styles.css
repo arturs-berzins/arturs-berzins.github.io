@@ -25,3 +25,39 @@ h1, h2, h3, h4, h5, h6 {
     width: 20px;
     height: 20px;
 }
+
+
+/* PUBLICATIONS */
+#publications li {
+    list-style: none;
+}
+
+#publications li:not(:last-child) {
+    margin-bottom: 2.5em;
+}
+
+#publications .title {
+    font-weight: bold;
+    /* font-size: 18px; */
+}
+
+#publications author-me{
+    /* font-weight: bolder; */
+    text-decoration: underline dotted;
+}
+
+
+
+/* PRESENTATIONS */
+#presentations li {
+    list-style: none;
+}
+
+#presentations li:not(:last-child) {
+    margin-bottom: 2.5em;
+}
+
+#presentations .title {
+    font-weight: bold;
+    /* font-size: 18px; */
+}
