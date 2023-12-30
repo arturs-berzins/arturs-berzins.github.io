@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 }
 
-#publications li:not(:last-child) {
+#publications > li:not(:last-child) {
     margin-bottom: 2.5em;
 }
 
@@ -46,6 +46,41 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline dotted;
 }
 
+/* Publication links */
+#publications .links li {
+    padding: .1em 0px;
+}
+
+.absBox, .bibBox {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.absBox {
+    text-align: justify;
+}
+
+.absBox p {
+    margin-bottom: 0;
+}
+
+.bibBox {
+    position: relative;
+}
+
+.bibBox pre {
+    margin-bottom: 0;
+}
+
+.copyButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
 
 
 /* PRESENTATIONS */

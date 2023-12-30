@@ -8,10 +8,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto&display=swap' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="img/icons/ab.png"> <!-- https://favicon.io/favicon-generator/ using Sen, weight 700, size 72 -->
 </head>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script_links.js"></script>
+    <script src="resources/publications.js"></script>
+    <script src="populate_publications.js"></script>
+    <script src="populate_presentations.js"></script>
    
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,7 +33,7 @@
             <a class="nav-item nav-link active" href="#">Home</a>
             <!-- <a class="nav-item nav-link" href="#panel_publications">Publications</a>
             <a class="nav-item nav-link" href="#panel_presentations">Presentations</a> -->
-            <a class="nav-item nav-link" href="cv.html">CV</a>
+            <!-- <a class="nav-item nav-link" href="cv.html">CV</a> -->
         </div>
         </div>
     </div>
@@ -49,9 +54,8 @@
                     <li><a href="https://github.com/arturs-berzins/"><img src="img/icons/github.svg" alt="GitHub"></a></li>
                     <li><a href="http://scholar.google.com/citations?user=cAU3TUoAAAAJ"><img src="img/icons/scholar.svg" alt="Google Scholar"></a></li>
                     <li><a href="https://www.linkedin.com/in/arturs-berzins/"><img src="img/icons/linkedin.svg" alt="LinkedIn"></a></li>
-                    <li><a href="https://twitter.com/artuursberzins"><img src="img/icons/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://twitter.com/artuursberzins"><img src="img/icons/x.svg" alt="Twitter"></a></li>
                     <!-- https://www.thingiverse.com/artuurs/designs -->
-                    <!-- http://takka.ai/ -->
                 </ul>
             </div>
 
@@ -60,25 +64,21 @@
                 <h1>About me</h1>
                 
                 
-                <div style="margin-top:3%;">                
+                <div style="margin-top:3%;">
 					<p>
                         I am currently at the 
-                        <a href="https://www.sintef.no/en/digital/departments-new/applied-mathematics/geometry/">Geometry group</a> 
-                        of <a href="https://www.uio.no/english/">SINTEF</a> pursuing a PhD in Mathematics from the <a href="#">University of Oslo</a>.
-                        <br>
-                        I am a fellow of <a href="#">GRAPES</a>, a Marie Sklodowska-Curie Innovative Training Network.
+                        <a href="https://www.sintef.no/en/digital/departments-new/applied-mathematics/geometry/" target="_blank">Geometry group at SINTEF</a> pursuing a PhD in Mathematics from the <a href="https://www.uio.no/english/" target="_blank">University of Oslo</a>.
+                        I am a fellow of <a href="http://grapes-network.eu/" target="_blank">GRAPES</a>, a Marie Sklodowska-Curie Innovative Training Network.
                     </p>
 					
 					<p>
-                        I received my BSc and MSc in mechanical engineering from <a href="https://www.rwth-aachen.de/">RWTH Aachen</a> specializing in simulation technology.
-                        <br>
-                        In my theses, I applied machine learning to engineering workflows where geometry was key.
-                        <br>
-                        This let to my current work on geometry in ML for both theory and application.
+                        I received my BSc and MSc in mechanical engineering from <a href="https://www.rwth-aachen.de/" target="_blank">RWTH Aachen</a> specializing in simulation technology.
+                        In both of my theses, I applied ML to engineering tasks where geometry was a key consideration.
+                        This inspired my current research on geometry in ML for both theory and application.
                     </p>
 
                     <!-- <p>
-                        NeRF, ReLU, shape & topology optimization, PINN, spatial graphs, 3D printing
+                        Neural fields, ReLU, topology optimization, PINN, spatial graphs, 3D printing
                     </p> -->
                 </div>
             </div>
@@ -98,37 +98,7 @@
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                     <ul id="publications">
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Polyhedral Complex Extraction from ReLU Networks using Edge Subdivision</div>
-                            <div class="authors"><author-me>Arturs Berzins</author-me></div>
-                            <div class="chanel">40th International Conference on Machine Learning (ICML 2023)</div>
-                            <div class="links">  </div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Neural Implicit Shape Editing using Boundary Sensitivity</div>
-                            <div class="authors"><author-me>Arturs Berzins</author-me>, Moritz Ibing, Leif Kobbelt</div>
-                            <div class="chanel">The Eleventh International Conference on Learning Representations (ICLR 2023)</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Standardized Non-Intrusive Reduced Order Modeling Using Different Regression Models With Application to Complex Flow Problems</div>
-                            <div class="authors"><author-me>Arturs Berzins</author-me>, Jan Helmig, Fabian Key, Stefanie Elgeti</div>
-                            <div class="chanel">ArXiv, abs/2006.13706, 2020</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Textile Multitouch Force-Sensor Array Based on Circular and Non-Circular Polymer Optical Fibers</div>
-                            <div class="authors">Christian-Alexander Bunge, Jan P. Kallweit, Mohmmed Al Houri, Benjamin Mohr, <author-me>Arturs Berzins</author-me>, Christian Grauberger, Putu Adi, Thomas Gries</div>
-                            <div class="chanel">IEEE Sensors Journal, 20(14): 7548-7555, 2020</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Textile Touch-Sensor Array based on Circular and Non-Circular Polymer Optical Fibers</div>
-                            <div class="authors">Jan P. Kallweit, Christian-Alexander Bunge, Mohmmed Al Houri, Benjamin Mohr, <author-me>Arturs Berzins</author-me>, Christian Grauberger, Putu Adi, Thomas Gries</div>
-                            <div class="chanel">IEEE International Conference on Flexible and Printable Sensors and Systems (FLEPS), 2019</div>
-                        </li>
+                        <!-- Filled by populate_publications.js -->
                     </ul>
                 </div>
               </div>
@@ -143,92 +113,8 @@
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
                     <ul id="presentations">
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Polyhedral Complex Extraction from ReLU Networks using Edge Subdivision</div>
-                            <div class="event">GRAPES Learning Week II: Industrial skills and advanced topics in ML</div>
-                            <div class="spacetime">6-10 September 2023, Barcelona, Spain</div>
-                            <div class="type">Seminar presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Polyhedral Complex Extraction from ReLU Networks using Edge Subdivision</div>
-                            <div class="event">ICML 2023 workshop: Topology, Algebra, and Geometry in Machine Learning (TAG-ML)</div>
-                            <div class="spacetime">23-29 July 2023, Honololu, USA</div>
-                            <div class="type">Workshop poster</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Polyhedral Complex Extraction from ReLU Networks using Edge Subdivision</div>
-                            <div class="event">The Fortieth International Conference on Machine Learning (ICML 2023)</div>
-                            <div class="spacetime">23-29 July 2023, Honololu, USA</div>
-                            <div class="type">Conference poster</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Neural Implicit Shape Editing using Boundary Sensitivity</div>
-                            <div class="event">SIAM Conference on Computational Geometric Design minisymposium: Learning, Processing, and Optimising shapes</div>
-                            <div class="spacetime">3-7 July 2023, Genoa, Italy</div>
-                            <div class="type">Minisymposium talk</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Neural Implicit Shape Editing using Boundary Sensitivity</div>
-                            <div class="event">The Eleventh International Conference on Learning Representations (ICLR 2023)</div>
-                            <div class="spacetime">1-5 May 2023, Rwanda, Kigali</div>
-                            <div class="type">Conference poster</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Learning PDE solution spaces using Tchebycheffian B-splines</div>
-                            <div class="event">10th International Conference on Isogeometric Analysis (IGA 2022)</div>
-                            <div class="spacetime">6-9 November 2022, Banff, Canada</div>
-                            <div class="type">Conference presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Hierarchical Analytical Marching of Piecewise Linear Neural Networks</div>
-                            <div class="event">GRAPES Learning Week II</div>
-                            <div class="spacetime">13-17 June 2022, Lugano, Switzerland</div>
-                            <div class="type">Seminar presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Exploring Challenges in Shape Analysis, Generation, and Optimization with Neural Networks</div>
-                            <div class="event">Geometric Modeling: Interoperability and New Challenges</div>
-                            <div class="spacetime">21-26 November 2021, Dagstuhl, Germany</div>
-                            <div class="type">Seminar presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Geometric Modelling for Evolutionary Deep Learning</div>
-                            <div class="event">GRAPES Learning Week I: Academic skills and advanced topics in CAD</div>
-                            <div class="spacetime">6-10 September 2021, Barcelona, Spain</div>
-                            <div class="type">Seminar presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Geometric Modelling for Evolutionary Deep Learning</div>
-                            <div class="event">GRAPES Learning Week I: Academic skills and advanced topics in CAD</div>
-                            <div class="spacetime">6-10 September 2021, Barcelona, Spain</div>
-                            <div class="type">Seminar presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Take a Seat: Reinforcement Learning for Social Distancing</div>
-                            <div class="event">Confer Conference 2021</div>
-                            <div class="spacetime">6 June 2021, online</div>
-                            <div class="type">Conference presentation</div>
-                        </li>
-                        <li> 
-                            <!-- THUMBNAIL -->
-                            <div class="title">Geometric Modelling and Evolutionary Deep Learning Architectures</div>
-                            <div class="event">Geilo Winter School 2021</div>
-                            <div class="spacetime">27 January 2021, online</div>
-                            <div class="type">Winter school poster</div>
-                        </li>
+                        <!-- Filled by populate_presentations.js -->
                     </ul>
-    
                 </div>
               </div>
             </div>
