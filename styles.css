@@ -70,8 +70,8 @@ h1, h2, h3, h4, h5, h6 {
 .bibBox {
     position: relative;
 }
-
-.bibBox pre {
+.bibBox pre{
+    white-space: pre-wrap;
     margin-bottom: 0;
 }
 
