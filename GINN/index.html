@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>GINNs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto&display=swap' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="style_GINN.css">
+  <link rel="icon" type="image/x-icon" href="res/icons/ab.png"> <!-- https://favicon.io/favicon-generator/ using Sen, weight 700, size 72 -->
+
+  <!-- KATEX -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <!-- MAIN -->
+  <div class="container">
+      
+        <h1 class="text-center" style="padding: 20px;"> Geometry-Informed Neural Networks </h1>
+      
+        <!-- ROW: AUTHORS -->
+        <div class="row justify-content-center" style="text-align: center;">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">Arturs Berzins<sup>*</sup></li>
+            <li class="list-inline-item">Andreas Radler<sup>*</sup></li>
+            <li class="list-inline-item">Sebastian Sanokowski</li>
+            <li class="list-inline-item">Sepp Hochreiter</li>
+            <li class="list-inline-item">Johannes Brandstetter</li>
+          </ul>
+          <div style="margin-bottom: 20px;">* equal contribution</div>
+          <!-- we can handle affiliations via links or <sup>2</sup> -->
+        </div> <!-- ROW: AUTHORS -->
+
+        <!-- ROW: LINKS -->
+        <div class="row justify-content-center" style="text-align: center;">
+          <ul class="project-links">
+            <li>
+              <a class='btn btn-light' href="https://arxiv.org/abs/2402.14009" target="_blank">
+                <img src="res/icons/clipboard.svg" alt="ArXiv Icon">
+                <span>Paper</span>
+              </a>
+            </li>
+            <li>
+              <a class='btn btn-light' href="https://github.com/radlera/GINN-Geometry-Informed-Neural-Nets" target="_blank">
+                <img src="res/icons/github.svg" alt="GitHub Icon">
+                <span>Code</span> <!-- <br> <small>(coming soon)</small> -->
+              </a>
+            </li>
+          </ul>
+        </div> <!-- ROW: LINKS -->
+
+        <div class="row justify-content-center">
+          <figure class="figure mx-auto d-flex flex-column align-items-center">
+            <img src="res/title.png" class="figure-img img-fluid" alt="" id="img_title">
+            <figcaption class="figure-caption">
+              The GINN learning paradigm applied to four different geometry-constrained problems.
+              A given set of constraints on the shape $\Omega$ defines the set of feasible shapes $\mathcal{K}$.
+              A GINN is a neural network trained to find feasible shapes, which are unique in the top two rows.
+              However, as often in geometry, the problems in the bottom two rows have multiple solutions.
+              To produce diverse solutions $S\subset\mathcal{K}$ we add a diversity loss.
+              Using only constraints and diversity, the GINN paradigm for shape generative modeling is entirely data-free.
+              <!-- A given set of constraints on the shape $\Omega$ and its boundary $\partial\Omega$ defines the feasible set $\mathcal{K}$.
+                A GINN is a neural network trained to represent a close-to feasible shape.
+                Often in geometry the feasible set is non-singular, hence the generative GINN outputs multiple solutions with enforced diversity.
+                Using only constraints and diversity, our approach to generative modeling is entirely data-free. -->
+              </figcaption>
+          </figure>
+        </div>
+
+        <hr> 
+
+        <div class="row">
+          <h3>Abstract</h3>
+          <div class="col-md-8 my-auto" style="text-align: justify;">
+            <span class="align-middle">
+              Geometry is a ubiquitous language of computer graphics, design, and engineering.
+              However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies.
+              To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models <em>without any data</em>.
+              GINNs combine
+              <ol>
+                <li> learning under constraints, </li>
+                <li> neural fields as a suitable representation, and </li>
+                <li> generating diverse solutions to under-determined problems. </li>
+              </ol>
+              We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.
+          </span>
+          </div>
+          <div class="col-md-4 mx-auto">
+            <figure class="figure">
+              <img src="res/venn.png"  class="figure-img img-fluid" style="padding-left: 10%; padding-right: 10%;">
+          </figure>
+          </div>
+
+        </div> <!-- ROW -->
+        <hr>
+
+        
+
+        <div class="row  d-flex justify-content-center">
+          <h3>Examples</h3>
+
+          <div class="row row_results">
+            <div class="col-md-4">
+            <figure class="figure">
+                <img src="res/GINN/minsurf.png" class="figure-img img-fluid" alt="Min Surf">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Minimal surface.</b>
+                  GINN finds the unique surface that attaches to the prescribed boundary while having zero mean-curvature everywhere, also known as the Plateau's problem.
+                  <!-- <a href="https://en.wikipedia.org/wiki/Plateau%27s_problem"></a> -->
+                </figcaption>
+            </figure>
+            </div>
+            <div class="col-md-4">
+            <figure class="figure">
+                <img src="res/GINN/mirror.png" class="figure-img img-fluid" alt="Mirror">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Parabolic mirror.</b>
+                  GINN finds the unique surface of a mirror -- a parabolic mirror -- that collects reflected rays into a single point.
+                  <!-- <a href="https://en.wikipedia.org/wiki/Parabolic_reflector"></a> -->
+                </figcaption>
+            </figure>
+            </div>
+            <div class="col-md-4">
+            <figure class="figure">
+                <img src="res/GINN/simple_scc_stack.png" class="figure-img img-fluid" alt="Simple SCC Stack">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Connectedness.</b>
+                  The connectedness loss allows the GINN to find the bottom shape connecting the two interfaces within the allowed design region.
+                  The top shape is obtained by training without the connectedness loss.
+                </figcaption>
+            </figure>
+            </div>
+            </div>
+
+            <div class="row row_results gy-5">
+            <div class="col-md-4">
+            <figure class="figure">
+              <img src="res/GINN/anim_obst.gif" class="figure-img img-fluid" alt="Generative obstacle.">
+              <figcaption class="figure-caption">
+                <b>Latent space interpolation</b> of a GINN trained to produce diverse solutions to the aforementioned obstacle problem.
+                Compare the simplicity bias of a softplus-MLP to different SIREN models in the figure below.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-md-4">
+            <figure class="figure">
+              <img src="res/GINN/anim_jeb.gif" class="figure-img img-fluid" alt="Training of jet-engine bracket.">
+              <figcaption class="figure-caption">
+                <b>Jet-engine bracket.</b>
+                The training animation shows the search for a shape with interface, design-space, and connectedness constraints inspired by a realistic 3D engineering design use-case.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-md-4">
+            <figure class="figure">
+              <img src="res/gpinn.gif" class="figure-img img-fluid" alt="Generative Physics-Informed neural network.">
+              <figcaption class="figure-caption">
+                <b>Under-determined physics.</b>
+                A generative physics-informed neural network (PINN) applied to an under-determined system of reaction-diffusion.
+                Traversing the latent space of the trained network produces morphing Turing patterns.
+                <!-- hyperlink -->
+              </figcaption>
+            </figure>
+          </div>
+          </div>
+
+
+          <!-- <div class="row row_results gy-5">
+            <div class="col-md-12 d-flex justify-content-center"> 
+              <figure class="figure">
+                <img src="res/GINN/diversity.png" class="figure-img img-fluid" alt="Generative Physics-Informed neural network.">
+                <figcaption class="figure-caption">
+                  <b>Diversity.</b>
+                  A superposition of 16 solutions found by different generative GINNs trained with and without a diversity loss.
+                  For the softplus-MLP, the diversity loss is needed to avoid mode-collapse.
+                  SIREN exhibits induced diversity, but adding the loss increases the diversity further.
+                </figcaption>
+              </figure>
+            </div>
+          </div> -->
+
+        </div> <!-- ROW -->
+        <hr>
+
+
+        <div class="row">
+          <h3>BibTeX</h3>
+          
+          <div class="project-bibBox">
+            <button class="btn btn-light btn-sm copyButton" onclick="copyToClipboard(this)"> <img src="res/icons/clipboard.svg"> </button>
+            <pre>@article{berzins2024ginn,
+  title={Geometry-Informed Neural Networks},
+  author={Berzins, Arturs and Radler, Andreas and Sanokowski, Sebastian and Hochreiter, Sepp, and Brandstetter, Johannes},
+  journal={arXiv preprint arXiv:2402.14009},
+  year={2024}
+}</pre>
+          </div>
+
+        </div>
+        <hr>
+
+        <div class="row">
+          <h3>Acknowledgements</h3>
+          <p>This project was supported by the European Union’s Horizon 2020 Research and Innovation Programme under Grant Agreement number 860843.</p>
+        </div>
+
+
+    </div> <!-- CONTAINER -->
+
+</body>
+
+</html>

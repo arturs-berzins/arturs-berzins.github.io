@@ -1,0 +1,96 @@
+/* LINKS */
+.project-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .project-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .project-links li:last-child {
+    margin-right: 0;
+  }
+
+  .project-links li img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .project-links li span {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+/* BIBTEX */
+.project-bibBox {
+    background-color: WhiteSmoke;
+}
+
+.project-bibBox {
+    position: relative;
+}
+.project-bibBox pre{
+    white-space: pre-wrap;
+    margin-bottom: 0;
+}
+
+.copyButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* #row_results_GINN figure{
+    margin-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#row_results_GINN div{
+    margin-bottom: 3em;
+} */
+
+@media (min-width: 768px) {
+    .row_results {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline; /* Align images to share a baseline */
+    }
+
+    .row_results .col-md-4 {
+        flex-grow: 1;
+    }
+
+    .row_results .figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* height: 100%; */
+        width: 80%;
+    }
+
+    
+    .row_results .figure .figure-img {
+        width: 100%;
+        margin: auto;
+    }
+
+}
+
+
+#img_title {
+    margin: 2em 0;
+}
+
+@media (min-width: 992px) {
+    #img_title {
+        max-width: 60%;
+    }
+}
