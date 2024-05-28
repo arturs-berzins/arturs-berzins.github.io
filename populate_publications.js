@@ -22,7 +22,7 @@ const publicationData = [
         outlet: 'arXiv:2402.14009 [cs.LG], 2024',
         link_paper: 'https://arxiv.org/abs/2402.14009',
         link_code: '',
-        link_project: 'GINN.html',
+        link_project: 'GINN/index.html',
         abstract: 'We introduce the concept of geometry-informed neural networks (GINNs), which encompass (i) learning under geometric constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined systems often encountered in geometric tasks. Notably, the GINN formulation does not require training data, and as such can be considered generative modeling driven purely by constraints. We add an explicit diversity loss to mitigate mode collapse. We consider several constraints, in particular, the connectedness of components which we convert to a differentiable loss through Morse theory. Experimentally, we demonstrate the efficacy of the GINN learning paradigm across a range of two and three-dimensional scenarios with increasing levels of complexity.',
         bibtex: `${bibtex.Berzins24ginn}`,
         thumbnail: 'resources/thumbnails/berzins24ginn.png',
