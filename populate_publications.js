@@ -23,7 +23,7 @@ const publicationData = [
         link_paper: 'https://arxiv.org/abs/2402.14009',
         link_code: 'https://github.com/ml-jku/GINNs-Geometry-informed-Neural-Networks',
         link_project: 'GINN/',
-        abstract: 'We introduce the concept of geometry-informed neural networks (GINNs), which encompass (i) learning under geometric constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined systems often encountered in geometric tasks. Notably, the GINN formulation does not require training data, and as such can be considered generative modeling driven purely by constraints. We add an explicit diversity loss to mitigate mode collapse. We consider several constraints, in particular, the connectedness of components which we convert to a differentiable loss through Morse theory. Experimentally, we demonstrate the efficacy of the GINN learning paradigm across a range of two and three-dimensional scenarios with increasing levels of complexity.',
+        abstract: 'Geometry is a ubiquitous language of computer graphics, design, and engineering. However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies. To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models without any data. GINNs combine (i) learning under constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined problems. We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.',
         bibtex: `${bibtex.Berzins24ginn}`,
         thumbnail: 'resources/thumbnails/berzins24ginn.png',
     },
@@ -99,7 +99,7 @@ function fill_template_publication(data){
         <div class="col-md-10">
             <div class="title">${data.title}</div>
             <div class="authors">${data.authors}</div>
-            <div class="chanel">${data.outlet}</div>
+            <div class="channel">${data.outlet}</div>
             <div class="links">
                 <ul class="list-inline list-inline-horizontal" id='ul-link-${data.key}'>
                     <li class='${li_class}' id='li-abs-${data.key}'><button class='${btn_class}' id='absBtn${data.key}' onclick="toggleBox('${data.key}', 'abs')">Abstract</button></li>
