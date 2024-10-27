@@ -4,10 +4,10 @@
 */
 
 const bibtex = {
-"Berzins24ginn":
+"berzins24ginn":
 `@misc{berzins2024ginn,
     title={Geometry-Informed Neural Networks}, 
-    author={Arturs Berzins and Andreas Radler and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
+    author={Arturs Berzins and Andreas Radler and Eric Volkmann and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
     year={2024},
     eprint={2402.14009},
     archivePrefix={arXiv},

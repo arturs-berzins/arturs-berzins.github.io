@@ -16,15 +16,15 @@ const publicationData = [
     //     bibtex: '',
     // },
     {
-        key: 'berzins23ginn',
+        key: 'berzins24ginn',
         title: 'Geometry-Informed Neural Networks',
-        authors: '<author-me>Arturs Berzins</author-me>, Andreas Radler, Sebastian Sanokowski, Sepp Hochreiter, Johannes Brandstetter',
+        authors: '<author-me>Arturs Berzins</author-me>, Andreas Radler, Eric Volkmann, Sebastian Sanokowski, Sepp Hochreiter, Johannes Brandstetter',
         outlet: 'arXiv:2402.14009 [cs.LG], 2024',
         link_paper: 'https://arxiv.org/abs/2402.14009',
         link_code: 'https://github.com/ml-jku/GINNs-Geometry-informed-Neural-Networks',
         link_project: 'GINN/',
         abstract: 'Geometry is a ubiquitous language of computer graphics, design, and engineering. However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies. To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models without any data. GINNs combine (i) learning under constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined problems. We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.',
-        bibtex: `${bibtex.Berzins24ginn}`,
+        bibtex: `${bibtex.berzins24ginn}`,
         thumbnail: 'resources/thumbnails/berzins24ginn.png',
     },
     {
@@ -36,7 +36,7 @@ const publicationData = [
         link_code: 'https://github.com/arturs-berzins/relu_edge_subdivision',
         link_project: '',
         abstract: 'A neural network consisting of piecewise affine building blocks, such as fully-connected layers and ReLU activations, is itself a piecewise affine function supported on a polyhedral complex. This complex has been previously studied to characterize theoretical properties of neural networks, but, in practice, extracting it remains a challenge due to its high combinatorial complexity. A natural idea described in previous works is to subdivide the regions via intersections with hyperplanes induced by each neuron. However, we argue that this view leads to computational redundancy. Instead of regions, we propose to subdivide edges, leading to a novel method for polyhedral complex extraction. A key to this are sign-vectors, which encode the combinatorial structure of the complex. Our approach allows to use standard tensor operations on a GPU, taking seconds for millions of cells on a consumer grade machine. Motivated by the growing interest in neural shape representation, we use the speed and differentiability of our method to optimize geometric properties of the complex.',
-        bibtex: `${bibtex.Berzins23relu}`,
+        bibtex: `${bibtex.berzins23relu}`,
         thumbnail: 'resources/thumbnails/berzins23relu.png',
     },
     {
@@ -48,7 +48,7 @@ const publicationData = [
         link_code: 'https://github.com/arturs-berzins/boundary_sensitivity',
         link_project: '',
         abstract: 'Neural fields are receiving increased attention as a geometric representation due to their ability to compactly store detailed and smooth shapes and easily undergo topological changes. Compared to classic geometry representations, however, neural representations do not allow the user to exert intuitive control over the shape. Motivated by this, we leverage boundary sensitivity to express how perturbations in parameters move the shape boundary. This allows to interpret the effect of each learnable parameter and study achievable deformations. With this, we perform geometric editing: finding a parameter update that best approximates a globally prescribed deformation. Prescribing the deformation only locally allows the rest of the shape to change according to some prior, such as semantics or deformation rigidity. Our method is agnostic to the model its training and updates the NN in-place. Furthermore, we show how boundary sensitivity helps to optimize and constrain objectives (such as surface area and volume), which are difficult to compute without first converting to another representation, such as a mesh.',
-        bibtex: `${bibtex.Berzins23bs}`,
+        bibtex: `${bibtex.berzins23bs}`,
         thumbnail: 'resources/thumbnails/berzins23bs.png',
     },
     {
@@ -60,7 +60,7 @@ const publicationData = [
         link_code: 'https://github.com/arturs-berzins/sniROM',
         link_project: '',
         abstract: 'In recent years, numerical methods in industrial applications have evolved from a pure predictive tool towards a means for optimization and control. Since standard numerical analysis methods have become prohibitively costly in such multi-query settings, a variety of reduced order modeling (ROM) approaches have been advanced towards complex applications. In this context, the driving application for this work is twin-screw extruders (TSEs): manufacturing devices with an important economic role in plastics processing. Modeling the flow through a TSE requires non-linear material models and coupling with the heat equation alongside intricate mesh deformations, which is a comparatively complex scenario. We investigate how a non-intrusive, data-driven ROM can be constructed for this application. We focus on the well-established proper orthogonal decomposition (POD) with regression albeit we introduce two adaptations: standardizing both the data and the error measures as well as -- inspired by our space-time simulations -- treating time as a discrete coordinate rather than a continuous parameter. We show that these steps make the POD-regression framework more interpretable, computationally efficient, and problem-independent. We proceed to compare the performance of three different regression models: Radial basis function (RBF) regression, Gaussian process regression (GPR), and artificial neural networks (ANNs). We find that GPR offers several advantages over an ANN, constituting a viable and computationally inexpensive non-intrusive ROM. Additionally, the framework is open-sourced to serve as a starting point for other practitioners and facilitate the use of ROM in general engineering workflows.',
-        bibtex: `${bibtex.Berzins20snirom}`,
+        bibtex: `${bibtex.berzins20snirom}`,
         thumbnail: 'resources/thumbnails/berzins20snirom.png',
     },
     {
@@ -72,7 +72,7 @@ const publicationData = [
         link_code: '',
         link_project: '',
         abstract: 'A 3 × 3 textile integrated force-sensor array is presented that is based on the cross coupling of optical fibers and provides multi-touch capability. The force sensing relies on cross coupling between two fibers that are aligned orthogonally to each other. The actual coupling is improved by an increased contact area and higher scattering at the fiber crossing. A systematic analysis of different parameters is done for the driving and the sensing fiber, which involves materials, size, fabrication parameters as well as the cross-section shape. The results reveal that the combination of a rather stiff driving fiber and a flexible sensing fiber from elastomer (TPU) lead to the highest sensitivities in the range of 45.5 pW/N. The application of non-circular cross sections can improve the coupling efficiency by directing the side-emitted light better towards the sensing fiber. A trilobal-shaped driving fiber lead to an increase of 5 dBs, whereas the shaping of the sensing fiber improved the efficiency by another 7.5 dB.',
-        bibtex: `${bibtex.Bunge20textile}`,
+        bibtex: `${bibtex.bunge20textile}`,
         thumbnail: 'resources/thumbnails/bunge20textile.png',
     },
     // {

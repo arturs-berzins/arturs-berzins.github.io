@@ -1,6 +1,6 @@
 /**
  * Populate the list of presentations
- * TODO: add links to events, files?
+ * TODO: add files?
  */
 
 
