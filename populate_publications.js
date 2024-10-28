@@ -106,7 +106,7 @@ function fill_template_publication(data){
                     <li class='${li_class}' id='li-bib-${data.key}'><button class='${btn_class}' id='bibBtn${data.key}' onclick="toggleBox('${data.key}', 'bib')">BibTeX</button></li>
                     <li class='${li_class}' id='li-paper-${data.key}'><a class='${btn_class}' href="${data.link_paper}" target="_blank">Paper</a></li>
                     <li class='${li_class}' id='li-code-${data.key}'><a class='${btn_class}' href="${data.link_code}" target="_blank">Code</a></li>
-                    <li class='${li_class}' id='li-project-${data.key}'><a class='${btn_class}' href="${data.link_project}" target="_blank">Project</a></li>
+                    <li class='${li_class}' id='li-project-${data.key}'><a class='${btn_class}' href="${data.link_project}" target="_blank">Project page</a></li>
                 </ul>
                 <div class="absBox" id="absBox${data.key}">
                     <p>${data.abstract}</p>
