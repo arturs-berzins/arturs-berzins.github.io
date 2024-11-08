@@ -64,7 +64,7 @@
         align-items: baseline; /* Align images to share a baseline */
     }
 
-    .row_results .col-md-4 {
+    .row_results .col-md-3 {
         flex-grow: 1;
     }
 

@@ -31,11 +31,13 @@
         <!-- ROW: AUTHORS -->
         <div class="row justify-content-center" style="text-align: center;">
           <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">Arturs Berzins<sup>*</sup></li>
-            <li class="list-inline-item">Andreas Radler<sup>*</sup></li>
-            <li class="list-inline-item">Sebastian Sanokowski</li>
-            <li class="list-inline-item">Sepp Hochreiter</li>
-            <li class="list-inline-item">Johannes Brandstetter</li>
+            <li class="list-inline-item"><b>Arturs Berzins</b><sup>*</sup></li>
+            <li class="list-inline-item"><b>Andreas Radler</b><sup>*</sup></li>
+            <li class="list-inline-item"><b>Eric Volkmann</b><sup>*</sup></li>
+            <br>
+            <li class="list-inline-item"><b>Sebastian Sanokowski</b></li>
+            <li class="list-inline-item"><b>Sepp Hochreiter</b></li>
+            <li class="list-inline-item"><b>Johannes Brandstetter</b></li>
           </ul>
           <div style="margin-bottom: 20px;">* equal contribution</div>
           <!-- we can handle affiliations via links or <sup>2</sup> -->
@@ -53,104 +55,92 @@
             <li>
               <a class='btn btn-light' href="https://github.com/ml-jku/GINNs-Geometry-informed-Neural-Networks" target="_blank">
                 <img src="res/icons/github.svg" alt="GitHub Icon">
-                <span>Code</span> <!-- <br> <small>(coming soon)</small> -->
+                <span>Code</span>
               </a>
             </li>
           </ul>
         </div> <!-- ROW: LINKS -->
 
         <div class="row justify-content-center">
-          <figure class="figure mx-auto d-flex flex-column align-items-center">
-            <img src="res/title.png" class="figure-img img-fluid" alt="" id="img_title">
-            <figcaption class="figure-caption">
-              The GINN learning paradigm applied to four different geometry-constrained problems.
-              A given set of constraints on the shape $\Omega$ defines the set of feasible shapes $\mathcal{K}$.
-              A GINN is a neural network trained to find feasible shapes, which are unique in the top two rows.
-              However, as often in geometry, the problems in the bottom two rows have multiple solutions.
-              To produce diverse solutions $S\subset\mathcal{K}$ we add a diversity loss.
-              Using only constraints and diversity, the GINN paradigm for shape generative modeling is entirely data-free.
-              <!-- A given set of constraints on the shape $\Omega$ and its boundary $\partial\Omega$ defines the feasible set $\mathcal{K}$.
-                A GINN is a neural network trained to represent a close-to feasible shape.
-                Often in geometry the feasible set is non-singular, hence the generative GINN outputs multiple solutions with enforced diversity.
-                Using only constraints and diversity, our approach to generative modeling is entirely data-free. -->
+          
+          <!-- Left Column: Large Image -->
+          <div class="col-md-7 my-auto">
+            <figure class="figure mx-auto d-flex flex-column align-items-center">
+              <img src="res/GINN/5x5.png" class="figure-img img-fluid" alt="Main image" style="max-width: 100%; height: auto;">
+              <figcaption class="figure-caption text-center">
+                <!-- Main image caption describing the training process of geometry-informed neural networks and design goals. -->
+                We train geometry-informed neural networks to produce shapes satisfying geometric design requirements.
+                Under an additional diversity constraint, GINNs become generative.
+                Not only produce multiple solutions but also learn a latent space structure.
+                Traversing the 2D latent space continuously morphs solutions, i.e., the model generalizes.
+                The latent space is also organized -- a central bulky shape becomes thinner in the radial direction and
+                the axes can be identified by how the shape connects on the sides.
               </figcaption>
-          </figure>
+            </figure>
+          </div>
+          
+          <!-- Right Column: Two Images Stacked Vertically -->
+          <div class="col-md-5 d-flex flex-column justify-content-between">
+            <figure class="figure">
+              <img src="res/GINN/diagonal_overlay.gif" class="figure-img img-fluid" alt="Image 1" style="width: 100%;">
+              <figcaption class="figure-caption text-center">
+                The off-diagonal interpolates between anti-symmetric shapes.
+              </figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="res/GINN/diagonal_other_overlay.gif" class="figure-img img-fluid" alt="Image 2" style="width: 100%;">
+              <figcaption class="figure-caption text-center">
+                The main diagonal shifts mass along the back-front axis of the shape.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- <div class="col-md-7 my-auto">
+            <figure class="figure mx-auto d-flex flex-column align-items-center p0">
+              <img src="res/title.svg" class="figure-img img-fluid" alt="" id="img_title"  style="max-width: 100%;">
+              <figcaption class="figure-caption">
+                We train geometry-informed neural networks to generate shapes satisfying geometric design requirements.
+                For example, we generate parts that connect the cylindrical interfaces within the sketched design region on the left.
+                The <b>user controls</b> the problem and the solutions: here, we specify different additional requirements on the topology and surface smoothness.
+                </figcaption>
+            </figure>  
+          </div>
+
+          <div class="col-md-5 mx-auto">
+            <embed type="text/html" src="res/setup.html" width="100%" height="400px"> 
+              By complementing the design requirements with a diversity constraint, we can <b>train a shape-generative model without data</b>.
+          </div> -->
+
         </div>
 
         <hr> 
 
         <div class="row">
-          <h3>Abstract</h3>
-          <div class="col-md-8 my-auto" style="text-align: justify;">
+          <div class="col-md-9 my-auto" style="text-align: justify;">
+            <h3>Abstract</h3>
             <span class="align-middle">
-              Geometry is a ubiquitous language of computer graphics, design, and engineering.
-              However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies.
-              To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models <em>without any data</em>.
-              GINNs combine
-              <ol>
-                <li> learning under constraints, </li>
-                <li> neural fields as a suitable representation, and </li>
-                <li> generating diverse solutions to under-determined problems. </li>
-              </ol>
-              We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.
-          </span>
+              Geometry is a ubiquitous tool in computer graphics, design, and engineering.
+              However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies. 
+              To this end, we introduce geometry-informed neural networks (GINNs) -- a framework for training shape-generative neural fields <b>without data</b> by leveraging user-specified design requirements in the form of objectives and constraints.
+              By adding <em>diversity</em> as an explicit constraint, GINNs avoid mode-collapse and can generate multiple diverse solutions, often required in geometry tasks.
+              Experimentally, we apply GINNs to several validation problems and a realistic 3D engineering design problem, showing control over geometrical and topological properties, such as surface smoothness or the number of holes.
+              These results demonstrate the potential of training shape-generative models without data, paving the way for new generative design approaches without large datasets.
+            </span>
           </div>
-          <div class="col-md-4 mx-auto">
+          <div class="col-md-3 mx-auto">
             <figure class="figure">
-              <img src="res/venn.png"  class="figure-img img-fluid" style="padding-left: 10%; padding-right: 10%;">
+              <img src="res/venn.png"  class="figure-img img-fluid" style="padding: 5%;">
           </figure>
           </div>
 
         </div> <!-- ROW -->
         <hr>
 
-        
-
+<!--         
         <div class="row  d-flex justify-content-center">
-          <h3>Examples</h3>
-
-          <div class="row row_results">
+          <h3>Engineering design case study</h3>
+          <div class="row row_results gy-2">
             <div class="col-md-4">
-            <figure class="figure">
-                <img src="res/GINN/minsurf.png" class="figure-img img-fluid" alt="Min Surf">
-                <figcaption class="figure-caption bottom-caption">
-                  <b>Minimal surface.</b>
-                  GINN finds the unique surface that attaches to the prescribed boundary while having zero mean-curvature everywhere, also known as the Plateau's problem.
-                  <!-- <a href="https://en.wikipedia.org/wiki/Plateau%27s_problem"></a> -->
-                </figcaption>
-            </figure>
-            </div>
-            <div class="col-md-4">
-            <figure class="figure">
-                <img src="res/GINN/mirror.png" class="figure-img img-fluid" alt="Mirror">
-                <figcaption class="figure-caption bottom-caption">
-                  <b>Parabolic mirror.</b>
-                  GINN finds the unique surface of a mirror -- a parabolic mirror -- that collects reflected rays into a single point.
-                  <!-- <a href="https://en.wikipedia.org/wiki/Parabolic_reflector"></a> -->
-                </figcaption>
-            </figure>
-            </div>
-            <div class="col-md-4">
-            <figure class="figure">
-                <img src="res/GINN/simple_scc_stack.png" class="figure-img img-fluid" alt="Simple SCC Stack">
-                <figcaption class="figure-caption bottom-caption">
-                  <b>Connectedness.</b>
-                  The connectedness loss allows the GINN to find the bottom shape connecting the two interfaces within the allowed design region.
-                  The top shape is obtained by training without the connectedness loss.
-                </figcaption>
-            </figure>
-            </div>
-            </div>
-
-            <div class="row row_results gy-5">
-            <div class="col-md-4">
-            <figure class="figure">
-              <img src="res/GINN/anim_obst.gif" class="figure-img img-fluid" alt="Generative obstacle.">
-              <figcaption class="figure-caption">
-                <b>Latent space interpolation</b> of a GINN trained to produce diverse solutions to the aforementioned obstacle problem.
-                Compare the simplicity bias of a softplus-MLP to different SIREN models in the figure below.
-              </figcaption>
-            </figure>
           </div>
 
           <div class="col-md-4">
@@ -163,7 +153,55 @@
             </figure>
           </div>
 
-          <div class="col-md-4">
+        </div>
+      </div>
+      <hr> -->
+
+        <div class="row  d-flex justify-content-center">
+          <h3>Validation examples</h3>
+
+          <div class="row row_results 4">
+            <div class="col-md-3">
+            <figure class="figure">
+                <img src="res/GINN/minsurf.png" class="figure-img img-fluid" alt="Min Surf">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Minimal surface.</b>
+                  GINN finds the unique surface that attaches to the prescribed boundary while having zero mean-curvature everywhere, also known as the Plateau's problem.
+                  <!-- <a href="https://en.wikipedia.org/wiki/Plateau%27s_problem"></a> -->
+                </figcaption>
+            </figure>
+            </div>
+            <div class="col-md-3">
+            <figure class="figure">
+                <img src="res/GINN/mirror.png" class="figure-img img-fluid" alt="Mirror">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Parabolic mirror.</b>
+                  GINN finds the unique surface of a mirror -- a parabolic mirror -- that collects reflected rays into a single point.
+                  <!-- <a href="https://en.wikipedia.org/wiki/Parabolic_reflector"></a> -->
+                </figcaption>
+            </figure>
+            </div>
+            <div class="col-md-3">
+            <figure class="figure">
+              <img src="res/GINN/anim_obst.gif" class="figure-img img-fluid" alt="Generative obstacle.">
+              <figcaption class="figure-caption">
+                <b>Obstacle.</b> GINN finds the shape connecting the left and right interfaces within the allowed design region.
+                Latent space traversal reveals a spectrum of solutions discovered via the diversity constraint.
+                <!-- <b>Latent space interpolation</b> of a GINN trained to produce diverse solutions to the aforementioned obstacle problem. -->
+                <!-- Compare the simplicity bias of a softplus-MLP to different SIREN models in the figure below. -->
+              </figcaption>
+            </figure>
+            <!-- <figure class="figure">
+                <img src="res/GINN/simple_scc_stack.png" class="figure-img img-fluid" alt="Simple SCC Stack">
+                <figcaption class="figure-caption bottom-caption">
+                  <b>Connectedness.</b>
+                  The connectedness loss allows the GINN to find the bottom shape connecting the two interfaces within the allowed design region.
+                  The top shape is obtained by training without the connectedness loss.
+                </figcaption>
+            </figure> -->
+            </div>
+
+          <div class="col-md-3">
             <figure class="figure">
               <img src="res/gpinn.gif" class="figure-img img-fluid" alt="Generative Physics-Informed neural network.">
               <figcaption class="figure-caption">
@@ -174,8 +212,7 @@
               </figcaption>
             </figure>
           </div>
-          </div>
-
+        </div>
 
           <!-- <div class="row row_results gy-5">
             <div class="col-md-12 d-flex justify-content-center"> 
@@ -196,13 +233,30 @@
 
 
         <div class="row">
+          <h3>Future work</h3>
+            <span class="align-middle">
+              GINNs are a work in-progress and there are many future directions to explore: 
+              <ul>
+                <li>including data,</li>
+                <li>including physics through PDE constraints,</li>
+                <li>different diversity measures,</li>
+                <li>speeding up the training,</li>
+                <li>second-order optimizers,</li>
+                <li>scaling the experiments,</li>
+                <li>neural field conditioning mechanisms.</li>
+              </ul>
+            </span>
+
+          <hr>
+
+        <div class="row">
           <h3>BibTeX</h3>
           
           <div class="project-bibBox">
             <button class="btn btn-light btn-sm copyButton" onclick="copyToClipboard(this)"> <img src="res/icons/clipboard.svg"> </button>
             <pre>@article{berzins2024ginn,
   title={Geometry-Informed Neural Networks},
-  author={Berzins, Arturs and Radler, Andreas and Sanokowski, Sebastian and Hochreiter, Sepp, and Brandstetter, Johannes},
+  author={Berzins, Arturs and Radler, Andreas and Volkmann, Eric and Sanokowski, Sebastian and Hochreiter, Sepp, and Brandstetter, Johannes},
   journal={arXiv preprint arXiv:2402.14009},
   year={2024}
 }</pre>
