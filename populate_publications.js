@@ -16,7 +16,7 @@ const publicationData = [
     //     bibtex: '',
     // },
     {
-        key: 'berzins24ginn',
+        key: 'berzins25ginn',
         title: 'Geometry-Informed Neural Networks',
         authors: '<author-me>Arturs Berzins</author-me>, Andreas Radler, Eric Volkmann, Sebastian Sanokowski, Sepp Hochreiter, Johannes Brandstetter',
         outlet: '42nd International Conference on Machine Learning (ICML 2025)',
@@ -25,7 +25,7 @@ const publicationData = [
         link_project: 'GINN/',
         abstract: 'Geometry is a ubiquitous language of computer graphics, design, and engineering. However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies. To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models without any data. GINNs combine (i) learning under constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined problems. We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.',
         bibtex: `${bibtex.berzins25ginn}`,
-        thumbnail: 'resources/thumbnails/berzins24ginn.png',
+        thumbnail: 'resources/thumbnails/berzins25ginn.png',
     },
     {
         key: 'berzins23relu',

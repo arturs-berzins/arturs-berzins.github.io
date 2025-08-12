@@ -4,14 +4,13 @@
 */
 
 const bibtex = {
-"berzins24ginn":
-`@misc{berzins2024ginn,
-    title={Geometry-Informed Neural Networks}, 
-    author={Arturs Berzins and Andreas Radler and Eric Volkmann and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
-    year={2024},
-    eprint={2402.14009},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
+"berzins25ginn":
+`@inproceedings{berzins2025ginn,
+  title={Geometry-Informed Neural Networks},
+  author={Arturs Berzins and Andreas Radler and Eric Volkmann and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
+  booktitle={Forty-second International Conference on Machine Learning},
+  year={2025},
+  url={https://openreview.net/forum?id=o4KpjiCdrk}
 }`,
 
 "berzins23relu":
