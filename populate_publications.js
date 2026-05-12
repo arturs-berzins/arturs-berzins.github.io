@@ -16,6 +16,18 @@ const publicationData = [
     //     bibtex: '',
     // },
     {
+        key: 'cranganore26einfields',
+        title: 'Einstein Fields: A Neural Perspective To Computational General Relativity',
+        authors: 'Sandeep Suresh Cranganore, Andrei Bodnar, <author-me>Arturs Berzins</author-me>, Johannes Brandstetter',
+        outlet: '14th International Conference on Learning Representations (ICLR 2026)',
+        link_paper: 'https://openreview.net/forum?id=OsevyadodL',
+        link_code: 'https://github.com/AndreiB137/EinFields/tree/main',
+        link_project: '',
+        abstract: 'We introduce Einstein Fields, a neural representation designed to compress computationally intensive four-dimensional numerical relativity simulations into compact implicit neural network weights. By modeling the metric, the core tensor field of general relativity, Einstein Fields enable the derivation of physical quantities via automatic differentiation. Unlike conventional neural fields (e.g., signed distance, occupancy, or radiance fields), Einstein Fields fall into the class of Neural Tensor Fields with the key difference that, when encoding the spacetime geometry into neural field representations, dynamics emerge naturally as a byproduct. Our novel implicit approach demonstrates remarkable potential, including continuum modeling of four-dimensional spacetime, mesh-agnosticity, storage efficiency, derivative accuracy, and ease of use. It achieves up to a 4000-fold reduction in storage memory compared to discrete representations while retaining a numerical accuracy of five to seven decimal places. Moreover, in single precision, differentiation of the Einstein Fields-parameterized metric tensor is up to five orders of magnitude more accurate compared to naive finite differencing methods. We demonstrate these properties on several canonical test beds of general relativity and numerical relativity simulation data, while also releasing an open-source -based library, taking the first steps to studying the potential of machine learning in numerical relativity.',
+        bibtex: `${bibtex.cranganore26einfields}`,
+        thumbnail: 'resources/thumbnails/cranganore26einfields.png',
+    },
+    {
         key: 'berzins25ginn',
         title: 'Geometry-Informed Neural Networks',
         authors: '<author-me>Arturs Berzins</author-me>, Andreas Radler, Eric Volkmann, Sebastian Sanokowski, Sepp Hochreiter, Johannes Brandstetter',

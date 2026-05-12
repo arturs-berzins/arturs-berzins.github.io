@@ -4,17 +4,26 @@
 */
 
 const bibtex = {
+"cranganore26einfields":
+`@inproceedings{cranganore2026einstein,
+    title={Einstein Fields: A Neural Perspective To Computational General Relativity},
+    author={Sandeep Suresh Cranganore and Andrei Bodnar and Arturs Berzins and Johannes Brandstetter},
+    booktitle={The Fourteenth International Conference on Learning Representations},
+    year={2026},
+    url={https://openreview.net/forum?id=OsevyadodL}
+}`,
+
 "berzins25ginn":
 `@inproceedings{berzins2025ginn,
-  title={Geometry-Informed Neural Networks},
-  author={Arturs Berzins and Andreas Radler and Eric Volkmann and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
-  booktitle={Forty-second International Conference on Machine Learning},
-  year={2025},
-  url={https://openreview.net/forum?id=o4KpjiCdrk}
+    title={Geometry-Informed Neural Networks},
+    author={Arturs Berzins and Andreas Radler and Eric Volkmann and Sebastian Sanokowski and Sepp Hochreiter and Johannes Brandstetter},
+    booktitle={Forty-second International Conference on Machine Learning},
+    year={2025},
+    url={https://openreview.net/forum?id=o4KpjiCdrk}
 }`,
 
 "berzins23relu":
-`@inproceedings{berzins23relu,
+`@inproceedings{berzins2023relu,
     author    = {Berzins, Arturs},
     title     = {Polyhedral Complex Extraction from ReLU Networks using Edge Subdivision},
     booktitle = {Proceedings of the 40th International Conference on Machine Learning},
