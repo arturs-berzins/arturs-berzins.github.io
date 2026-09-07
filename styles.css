@@ -2,12 +2,32 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #000;
+  color: #202426;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
   }
+
+/* Text links */
+#about-me a,
+#publications a,
+#presentations a {
+    color: #405b6b;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.14em;
+}
+
+#about-me a:hover,
+#about-me a:focus,
+#publications a:hover,
+#publications a:focus,
+#presentations a:hover,
+#presentations a:focus {
+    color: #203744;
+}
 
 
 .social-links {
@@ -55,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #d9d6ce;
     border-radius: 5px;
 }
 
@@ -99,21 +119,27 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .accordion-button {
-    color: #000;
-    background-color: #fff;
+    color: #202426;
+    background-color: transparent;
 }
 
 .accordion-button:not(.collapsed) {
-    color: #000;
-    background-color: #fff;
+    color: #202426;
+    background-color: transparent;
     border-width: 0;
+}
+
+.accordion-item {
+    color: #202426;
+    background-color: transparent;
+    border-color: #d9d6ce;
 }
 
 .accordion-button:link, .accordion-button:visited, .accordion-button:hover, .accordion-button:active  {
 }
 
 .accordion-button:focus, .accordion-button:not(.focus) {
-    border-color: #FFF;
+    border-color: transparent;
     outline: 0;
-    box-shadow: 0 0 0 0 #FFF;
+    box-shadow: none;
 }

@@ -12,6 +12,20 @@ const presentationData = [
     //     type: '',
     //  },
     {
+        title: 'Fibers and Singularities of ReLU Networks via Toric Path Lifting',
+        event: 'ILIAD 2026 Conference',
+        spacetime: '3-7 August 2026, Berkeley, USA',
+        type: 'Conference talk',
+        link_event: 'https://www.iliadconference.com',
+     },
+    {
+        title: 'Fibers and Singularities of ReLU Networks via Toric Path Lifting',
+        event: 'Math Machine Learning seminar MPI MIS + UCLA',
+        spacetime: '23 July 2026, online',
+        type: 'Seminar talk',
+        link_event: 'https://www.mis.mpg.de/events/event/fibers-and-singularities-of-relu-networks-via-toric-path-lifting',
+    },
+    {
         title: 'Neural Representations in Geometry',
         event: 'PhD disputation',
         spacetime: '19 June 2024, Oslo, Norway',
